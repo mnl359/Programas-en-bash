@@ -4,4 +4,4 @@ echo Que desea buscar?:
 read F1
 F=`echo $F1 | sed 's/ /+/g' | sed 's/"/%22/g'`
 
-google-chrome "http://google.com/search?q=$F"
+gnome-www-browser "http://google.com/search?q=$F"
