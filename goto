@@ -1,15 +1,12 @@
 #!/bin/sh                                                                 
 
-echo ¿Donde desea ir?
-read F1
 eafit=`echo ".eafit.edu.co"`
-F=`echo $F1 | sed 's/ /+/g' | sed 's/"/%22/g'`
-if [ $F1 = "interactiva" ] ; then
-    gnome-www-browser "http://$F$eafit"
-elif [ $F1 = "ulises" ] ; then
-    gnome-www-browser "http://webapps.$eafit/$F"
-elif [ $F1 = "correo" ] ; then
-    gnome-www-browser "http://nuevocorreo.$eafit"
+if [ $1 = "interactiva" ] ; then
+    gnome-www-browser "http://$1$eafit"
+elif [ $1 = "ulises" ] ; then
+    gnome-www-browser "http://webapps$eafit/$1"
+elif [ $1 = "correo" ] ; then
+    gnome-www-browser "http://nuevocorreo$eafit"
 else
-    gnome-www-browser "http://www.$F.com"
+    gnome-www-browser "http://www.$1.com"
 fi

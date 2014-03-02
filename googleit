@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo Que desea buscar?:
+echo ¿Que desea buscar?
 read F1
 F=`echo $F1 | sed 's/ /+/g' | sed 's/"/%22/g'`
 
