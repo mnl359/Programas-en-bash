@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script dedicado a la descarga e instalacion de paquetes en linux de forma automatica
 FILE="/tmp/out.$$"
 GREP="/bin/grep"
 echo "Se recomienda estar conectado a una red de alta velocidad y ser usuario root"

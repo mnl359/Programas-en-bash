@@ -1,3 +1,13 @@
 #!/bin/sh
-
-gnome-www-browser "http://google.com/search?q=$1"
+#Script dedicado a la busqueda en google ya para buscar imagenes o consultas generales
+echo -n "Desea buscar imagenes o hacer una consulta? \n"
+read RES
+if [ $RES = "imagenes" ]; then
+    echo -n "Que desea buscar? \n"
+    read TERM
+    gnome-www-browser "https://www.google.com.co/search?site=imghp&tbm=isch&q=$TERM"
+else
+    echo -n "Que desea buscar? \n"
+    read CONS
+    gnome-www-browser "http://google.com/search?q=$CONS"
+fi
