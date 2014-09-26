@@ -1,5 +1,6 @@
 #!/bin/sh
 #Script dedicado a la busqueda en google ya para buscar imagenes o consultas generales
+#Para un mejor funcionamiento se recomienda mover el archivo a "/usr/bin", si tiene problemas al moverlo intente siendo un usuario root
 echo -n "Desea buscar imagenes o hacer una consulta? \n"
 read RES
 if [ $RES = "imagenes" ]; then

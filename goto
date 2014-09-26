@@ -1,5 +1,6 @@
 #!/bin/sh                                                                 
 #Script dedicado a la busqueda de paginas en internet llamado desde consola, en especial las paginas institucionales de eafit
+#Para un funcionamiento correcto se recomienda mover el archivo a la direccion "/usr/bin", en caso de error al mover intense siendo usuario root
 eafit=`echo ".eafit.edu.co"`
 if [ $1 = "interactiva" ] ; then
     gnome-www-browser "http://$1$eafit"
