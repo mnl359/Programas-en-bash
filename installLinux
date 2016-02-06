@@ -24,10 +24,17 @@ else
 	sudo apt-get -y install vlc
 	sudo apt-get -y install gcc
 	sudo apt-get -y install g++
+	sudo apt-get -y install dropbox
+	sudo apt-get -y install skype
+	sudo apt-get install google-chrome-stable
+	echo -n "Dese instalar Hazkell? [S,N]:"
+	read RESHAS
+	if [ $RESHAS = 's' ]; then
 	sudo apt-get -y install alex
 	sudo apt-get -y install happy
 	sudo apt-get -y install cabal-install
 	sudo apt-get -y install ghci
+	fi
 	echo -n "Desea instalar LaTeX? [S,N]:"
 	read RESLAT
 	if [ $RESLAT = 's' ]; then
@@ -37,14 +44,5 @@ else
 	sudo add-apt-repository ppa:webupd8team/sublime-text-3 
 	sudo apt-get update 
 	sudo apt-get -y install sublime-text-installer
-
-	wget -O dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.2_i386.deb
-	wget -O google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
-	wget -O skype.deb http://www.skype.com/go/getskype-linux-beta-ubuntu-32
-
-	sudo gdebi dropbox.deb
-	sudo gdebi google-chrome.deb
-	sudo gdebi skype.deb
-	rm *.deb
     fi
 fi
