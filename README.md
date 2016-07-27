@@ -14,3 +14,5 @@ Changelog
   Se agrega la instalación de emacs  
   Se actualizan instalaciones de google chrome y dropbox
   Se cambia la auto instalación de haskell
+27 de Jul 2016
+  Se agregan parametros a todos los scripts para agregar ayuda en todos, aparte de esto se corrigen varios scripts que tenían problemas.
