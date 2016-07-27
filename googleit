@@ -1,14 +1,40 @@
 #!/bin/sh
-#Script dedicado a la busqueda en google ya para buscar imagenes o consultas generales
+#Script dedicado a la busqueda en google
 #Para un mejor funcionamiento se recomienda mover el archivo a "/usr/bin", si tiene problemas al moverlo intente siendo un usuario root
-echo -n "Desea buscar imagenes o hacer una consulta? \n"
-read RES
-if [ $RES = "imagenes" ]; then
-    echo -n "Que desea buscar? \n"
-    read TERM
-    gnome-www-browser "https://www.google.com.co/search?site=imghp&tbm=isch&q=$TERM"
-else
-    echo -n "Que desea buscar? \n"
-    read CONS
-    gnome-www-browser "http://google.com/search?q=$CONS"
-fi
+
+for param in "$*"
+do
+    if [ -z "$*" ]; then
+	echo -n "Para ver la ayuda use la opción -h\n"
+    elif [ $1 = "-h" ]; then
+	echo -n "Este Script le ayudara a buscar imagenes o hacer consultas en Google, los parametros son: \n-> -c para hacer una busqueda en Google\n-> -i para hacer una busqueda en Google Imagenes\n-> -v para hacer una busqueda en Youtube\n-> -m para hacer una busqueda en Google Maps\n-> -n para hacer una busqueda en Google News\n-> -b para hacer una busqueda en Google Books\n-> -a para hacer una busqueda en Google Apps\n-> -h para llamar la ayuda.\n"
+    elif [ $1 = "-c" ]; then
+	echo -n "Que desea buscar? \n"
+	read CONS
+	gnome-www-browser "http://google.com/search?q=$CONS"
+    elif [ $1 = "-i" ]; then
+	echo -n "Que Imagen desea buscar? \n"
+	read TERM
+	gnome-www-browser "https://www.google.com.co/search?site=imghp&tbm=isch&q=$TERM"
+    elif [ $1 = "-v" ]; then
+	echo -n "Que Video desea buscar? \n"
+	read VID
+	gnome-www-browser "https://www.youtube.com/results?search_query=$VID"
+    elif [ $1 = "-m" ]; then
+	echo -n "Que desea buscar? \n"
+	read MAP
+	gnome-www-browser "https://www.google.com.co/maps/place/$MAP"
+    elif [ $1 = "-n" ]; then
+	echo -n "Que Noticia desea buscar? \n"
+	read NEWS
+	gnome-www-browser "https://www.google.com.co/?gfe_rd=cr&ei=fwOZV82wO_LP8AezoZLQCA#tbm=nws&q=$NEWS"
+    elif [ $1 = "-b" ]; then
+	echo -n "Que Libro desea buscar?\n"
+	read BOOK
+	gnome-www-browser "https://www.google.com.co/?gfe_rd=cr&ei=WgaZV-K_HuzP8AeWk5LoBQ#q=$BOOK&tbm=bks"
+    elif [ $1 = "-a" ]; then
+	echo -n "Que Aplicación desea buscar?\n"
+	read APP
+	gnome-www-browser "https://www.google.com.co/?gfe_rd=cr&ei=WgaZV-K_HuzP8AeWk5LoBQ#q=$APP&tbm=app"
+    fi
+done
