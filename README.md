@@ -16,3 +16,5 @@ Changelog
   Se cambia la auto instalación de haskell
 27 de Jul 2016
   Se agregan parametros a todos los scripts para agregar ayuda en todos, a parte de esto se corrigen varios scripts que tenían problemas, se agrego la instalación de Franz despues de unas horas.
+9 de Ago 2016
+  Se elimina la instalación de Franz ya que pone demasiados problemas, se espera agregar a futuro.
