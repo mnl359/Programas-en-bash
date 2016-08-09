@@ -32,25 +32,6 @@ elif [ $1 = "-i" ]; then
     	    sudo apt-get -y install skype
 	    sudo apt-get -y install sublime-text-installer
 	    sudo apt-get -y install google-chrome-stable
-	    if [ $OS = "x86_64" ]; then
-		wget -O franz.tgz https://github.com/imprecision/franz-app/releases/download/3.1.1/Franz-linux-x64-3.1.1.tgz
-		mkdir Franz && mv franz.tgz ./Franz && cd Franz
-		tar -xvzf franz.tgz
-		rm franz.tgz
-		cd ~/
-		cp Franz ~/Escritorio
-		echo "alias franz='cd ~/Franz && ./Franz'" >> .bashrc
-		source ~/.bashrc
-	    elif [ $OS = "i686" ]; then
-		wget -q -O franz.tgz https://github.com/imprecision/franz-app/releases/download/3.1.1/Franz-linux-ia32-3.1.1.tgz
-		mkdir Franz && mv franz.tgz ./Franz && cd Franz
-		tar -xvzf franz.tgz
-		rm franz.tgz
-		cd ~/
-		cp Franz ~/Escritorio
-		echo "alias franz='cd ~/Franz && ./Franz'" >> .bashrc
-		source ~/.bashrc
-	    fi
 	    echo -n "Desea instalar Hazkell? [S,N]:"
 	    read RESHAS
 	    if [ $RESHAS = 's' ] || [ $RESHAS = 'S' ]; then
