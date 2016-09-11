@@ -18,3 +18,5 @@ Changelog
   Se agregan parametros a todos los scripts para agregar ayuda en todos, a parte de esto se corrigen varios scripts que tenían problemas, se agrego la instalación de Franz despues de unas horas.
 9 de Ago 2016
   Se elimina la instalación de Franz ya que pone demasiados problemas, se espera agregar a futuro.
+10 de Sep 2016
+  Se eliminan google chrome y sublime text ya que no estaban siendo instalados, se agrega la instalación de bleackbit (limpiador de basura tipo ccleaner), se inicia un nuevo script para instalar programas de seguridad, AUN ESTA INCOMPLETO.

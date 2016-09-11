@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ -z "$*" ]; then
+    echo -n "Para ver la ayuda use el parametro -h
+"
+elif [ $1 = "-i" ]; then
+    echo "Para ejecutar este comando es necesario ser usuario root"
+    echo -n "Desea continuar? [S,N]: "
+    read RES
+    if [ $RES = 'N' ] || [ $RES = 'n' ]; then
+	echo "Vuelva a intentarlo cuando quiera" 1>&2
+	exit 1
+    else 
+	if [ "$(id -u)" != "0" ]; then
+    	    echo "No posee permisos de root" 1>&2
+    	    exit 1
+	else
+	sudo apt-get -y install nmap
+	sudo apt-get -y install wifite
+	sudo apt-get -y install exiftool
+	sudo apt-get -y install wireshark
+	sudo apt-get -y install chkrootkit
+	sudo apt-get -y install rkhunter
+	sudo apt-get -y install john
+	sudo apt-get -y install 

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-OS=$(uname -m)
 if [ -z "$*" ]; then
     echo -n "Para ver la ayuda use el parametro -h
 "
@@ -30,8 +29,7 @@ elif [ $1 = "-i" ]; then
     	    sudo apt-get -y install g++
     	    sudo apt-get -y install dropbox
     	    sudo apt-get -y install skype
-	    sudo apt-get -y install sublime-text-installer
-	    sudo apt-get -y install google-chrome-stable
+	    sudo apt-get -y install bleachbit
 	    echo -n "Desea instalar Hazkell? [S,N]:"
 	    read RESHAS
 	    if [ $RESHAS = 's' ] || [ $RESHAS = 'S' ]; then
@@ -62,8 +60,6 @@ else
 -> g++
 -> dropbox
 -> skype
--> sublime-text
--> google-chrome
 Bajo las opciones del usuario se podrían instalar Hazkell y Latex
 Los parametros de ejecución son:
 -> -i para realizar la instalación
