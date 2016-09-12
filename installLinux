@@ -60,6 +60,7 @@ else
 -> g++
 -> dropbox
 -> skype
+-> bleachbit
 Bajo las opciones del usuario se podrían instalar Hazkell y Latex
 Los parametros de ejecución son:
 -> -i para realizar la instalación

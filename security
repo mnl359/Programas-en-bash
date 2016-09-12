@@ -15,11 +15,26 @@ elif [ $1 = "-i" ]; then
     	    echo "No posee permisos de root" 1>&2
     	    exit 1
 	else
-	sudo apt-get -y install nmap
-	sudo apt-get -y install wifite
-	sudo apt-get -y install exiftool
-	sudo apt-get -y install wireshark
-	sudo apt-get -y install chkrootkit
-	sudo apt-get -y install rkhunter
-	sudo apt-get -y install john
-	sudo apt-get -y install 
+	    sudo apt-get -y install nmap
+	    sudo apt-get -y install wifite
+	    sudo apt-get -y install exiftool
+	    sudo apt-get -y install wireshark
+	    sudo apt-get -y install chkrootkit
+	    sudo apt-get -y install rkhunter
+	    sudo apt-get -y install john
+	fi
+    fi
+else
+    echo "Script para la instalacion de los siguientes programas:
+-> nmap
+-> wifite
+-> exiftool
+-> wireshark
+-> chkrootkit
+-> rkhunter
+-> jhon the ripper
+Los parametros de ejecución son:
+-> -i para realizar la instalación
+-> -h para llamar la ayuda"
+fi
+
