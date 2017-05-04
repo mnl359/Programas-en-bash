@@ -21,4 +21,6 @@ Changelog
 10 de Sep 2016
   Se eliminan google chrome y sublime text ya que no estaban siendo instalados, se agrega la instalación de bleachbit (limpiador de basura tipo ccleaner), se inicia un nuevo script para instalar programas de seguridad, AUN ESTA INCOMPLETO.
 12 de Sep 2016
-   Se finaliza el script de seguridad con pocos programas instalables, se espera tener mas a futuro, se corrijen errores pequeños del installLinux
+  Se finaliza el script de seguridad con pocos programas instalables, se espera tener mas a futuro, se corrijen errores pequeños del installLinux
+4 de May 2017
+  Se eliminan goto y googleit por ser scprits inutiles y de poco uso, installLinux se agrega soporte e instalación para pacman y yum
