@@ -1,5 +1,9 @@
-Script para la instalación automatica en Linux
-=================
+#Script para la instalación automatica en Linux
+
+## Usage
+```shell
+   $./installLinux
+```
 
 ## Changelog
 
